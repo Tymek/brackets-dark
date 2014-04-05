@@ -1,0 +1,9 @@
+{
+    "title": "Dark Brackets",
+    "name": "brackets-black",
+    "author": "Tymoteusz Czech <mail@tymek.cz>",
+    "description": "Dark interface for Brackets.",
+    "version": "0.8",
+    "keywords": ["themes", "brackets", "custom", "highlight", "skins"],
+    "categories":"visual"
+}

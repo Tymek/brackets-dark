@@ -1,0 +1,356 @@
+
+.inline-widget a.filename {
+  color: white !important;
+}
+
+.inline-widget a.close {
+  color: #E4E4E4;
+  text-shadow: none;
+}
+
+.inline-widget .swatch,
+.inline-widget .large-swatches {
+  box-shadow: none !important;
+}
+
+.cm-matchhighlight {
+  color: black !important;
+}
+
+/* Brackets match highlighter support */
+
+.CodeMirror-scroll {
+  background-color: transparent;
+}
+
+.CodeMirror-gutters {
+  border-right: none;
+}
+
+#status-indicators,
+#status-info {
+  color: inherit;
+  background: transparent;
+}
+
+.CodeMirror-activeline-background {
+  background: none;
+}
+
+#working-set-header {
+  text-shadow: none;
+}
+
+.CodeMirror-gutter-filler,
+.CodeMirror-scrollbar-filler {
+  background: transparent;
+}
+
+.inline-widget .CodeMirror-scroll .CodeMirror-linenumbers {
+  background-color: transparent;
+}
+
+.main-view #open-files-container {
+  max-height: 300px;
+}
+
+/* Main UI color */
+
+/*
+@h: 205;
+@s: 80%;
+@l: 100%;
+*/
+
+.sidebar.panel {
+  /* Left sidebar, under opened files */
+
+  background: #474a4b;
+}
+
+.sidebar-selection-triangle {
+  display: none !important;
+}
+
+.sidebar-selection {
+  background: none;
+}
+
+#open-files-container li.selected a {
+  padding-right: 24px;
+  padding-left: 18px;
+  margin-top: -1px;
+  margin-right: 9px;
+  margin-bottom: -1px;
+  margin-left: 0;
+  overflow: hidden;
+  background: #2d2e30;
+  background: #2D2E30;
+  border-top: 1px solid #1E1F20;
+  border-bottom: 1px solid #505354;
+  border-radius: 11px;
+}
+
+#status-bar {
+  color: #94a3a7;
+  background: #3c3f41;
+  border-top: 1px solid #56595a;
+}
+
+#status-bar #status-overwrite {
+  color: inherit;
+}
+
+.bottom-panel {
+  color: #f0f0f0 !important;
+  background: #474a4b !important;
+  border-top: 1px solid #56595a;
+}
+
+.bottom-panel .toolbar,
+.bottom-panel .toolbar * {
+  color: #FFFFFF !important;
+  background: #3c3f41;
+  box-shadow: none;
+}
+
+.bottom-panel .table-container {
+  color: #bbb !important;
+  background: #2d2e30;
+}
+
+.bottom-panel .table-striped tbody tr:nth-child(even) td,
+.bottom-panel .table-striped tbody tr:nth-child(even) th {
+  background: #373a3c;
+}
+
+.bottom-panel .table-striped tbody tr:nth-child(odd) td,
+.bottom-panel .table-striped tbody tr:nth-child(odd) th {
+  background: #414446;
+}
+
+.bottom-panel .table-container tr.selected td {
+  color: #ffffff;
+}
+
+.codehint-menu .dropdown-menu {
+  border-radius: 0;
+}
+
+#main-toolbar {
+  /* Toolbar on the right */
+
+  background: #3c3f41;
+}
+
+.content:before {
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 1px;
+  background: #1E1F20;
+  content: "";
+  opacity: 0.33;
+}
+
+/* TODO
+.modal {
+	background: #1E1F20;
+	.dialog-title {
+		color: @color;
+	}
+	.modal-header {
+		background: @bg1;
+	}
+	.modal-body,
+	.modal-footer {
+		background: @bg3;
+	}
+}*/
+
+.modal-bar {
+  background: #3c3f41;
+}
+
+.content .CodeMirror,
+#editor-holder #not-editor {
+  font-family: 'Source Code Pro', Consolas, monaco, monospace;
+  font-size: 14px;
+  color: #f0f0f0;
+  background-color: #2d2e30;
+}
+
+.content .CodeMirror .CodeMirror-cursor {
+  /* cursor */
+
+  border-left: 1px solid #ffffff;
+}
+
+.content .CodeMirror .CodeMirror-cursor {
+  z-index: 5;
+  border-left: 2px solid #FFFFFF !important;
+}
+
+.content .CodeMirror .CodeMirror-selected {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.content .CodeMirror .CodeMirror-gutters {
+  background: #343638;
+}
+
+.content .CodeMirror .CodeMirror-linenumber {
+  padding: 0 9px;
+  color: #585c5d;
+}
+
+/*
+.content .CodeMirror .CodeMirror-foldgutter {
+	background: lighten(@bg, 2%);
+}
+*/
+
+::-webkit-scrollbar {
+  background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+  margin-right: 3px;
+  box-shadow: 0 0 0 12px #474a4b inset !important;
+}
+
+.content .CodeMirror .CodeMirror-foldgutter-open,
+.content .CodeMirror .CodeMirror-foldgutter-folded {
+  color: #556367;
+  text-align: center;
+}
+
+.content .CodeMirror .CodeMirror-foldmarker {
+  background: #3c3f41;
+  border-color: #5d5f60;
+}
+
+/*
+.content .CodeMirror .CodeMirror-activeline {
+	background: rgba(255,255,255,.1);
+}*/
+
+.content .CodeMirror-focused .CodeMirror-activeline-background,
+.content .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+  color: #788b90;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+
+.content .cm-keyword {
+  color: #33bbff;
+}
+
+.content .cm-atom {
+  color: #FFFFFF;
+}
+
+.content .cm-number {
+  color: #FFFFFF;
+}
+
+.content .cm-def {
+  color: #FFFFFF;
+}
+
+.content .cm-variable {
+  color: #d8d8d8; /* #ddd;*/
+}
+
+.content .cm-variable-2 {
+  color: #FFF; /* #7ab1cc;*/
+}
+
+.content .cm-variable-3 {
+  color: #ffcc99;
+}
+
+.content .cm-property {
+  color: #7ab1cc;
+}
+
+.content .cm-operator {
+  color: #f0f0f0;
+}
+
+.content .cm-comment {
+  color: #8c8c8c;
+}
+
+.content .cm-string {
+  color: #fff699;
+}
+
+.content .cm-string-2 {
+  color: #ffee33;
+}
+
+.content .cm-meta {
+  color: #ff3344;
+}
+
+.content .cm-builtin {
+  color: #ff9933;
+}
+
+.content .cm-qualifier {
+  color: #fff699;
+}
+
+.content .cm-bracket {
+  color: #f0f0f0;
+}
+
+.content .cm-tag {
+  color: #33bbff !important;
+}
+
+.content .cm-attribute {
+  color: #7ab1cc;
+}
+
+.content .cm-matchhighlight {
+  background-color: #282828;
+}
+
+.content .CodeMirror-matchingbracket {
+  font-weight: bold;
+  color: #ffee33 !important;
+}
+
+.content span.CodeMirror-matchingtag {
+  color: #ffee33 !important;
+  background: none;
+}
+
+.content span.CodeMirror-searching {
+  color: #f0f0f0;
+  background-color: rgba(34, 34, 34, 0.75);
+  box-shadow: 0 0 0 1px #5d5f60;
+}
+
+.content textarea:focus,
+.content input[type="text"]:focus,
+.content input[type="password"]:focus,
+.content input[type="datetime"]:focus,
+.content input[type="datetime-local"]:focus,
+.content input[type="date"]:focus,
+.content input[type="month"]:focus,
+.content input[type="time"]:focus,
+.content input[type="week"]:focus,
+.content input[type="number"]:focus,
+.content input[type="email"]:focus,
+.content input[type="url"]:focus,
+.content input[type="search"]:focus,
+.content input[type="tel"]:focus,
+.content input[type="color"]:focus,
+.content .uneditable-input:focus {
+  border-color: #5d5f60;
+  box-shadow: 0 0 1px 1px #8fddff;
+}

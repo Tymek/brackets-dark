@@ -1,0 +1,282 @@
+//@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900&subset=latin,latin-ext);
+
+.inline-widget a.filename {    color:white !important;}
+.inline-widget a.close {color: #E4E4E4;	text-shadow: none;}
+.inline-widget .swatch, .inline-widget .large-swatches {	box-shadow: none !important;}
+.cm-matchhighlight {color: black !important;} /* Brackets match highlighter support */
+.CodeMirror-scroll{	background-color:transparent;}
+.CodeMirror-gutters{	border-right:none}
+#status-indicators,#status-info{	background:transparent;	color:inherit;}
+.CodeMirror-activeline-background {	background:none;}
+#working-set-header{	text-shadow:none;}
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler {    background: transparent;}
+.inline-widget .CodeMirror-scroll .CodeMirror-linenumbers {  background-color: transparent;}
+.main-view #open-files-container {max-height: 300px;}
+
+@bg1: 		#3c3f41; /* Main UI color */
+@bg2: 		#5D5F60;
+@bg3: 		#474A4B;
+@color1:	#FFFFFF;
+@color2:	#94a3a7;
+@active1:	#0083e8;
+@active2:	#8fddff;
+@dark: 		#2D2E30;
+
+/*
+@h: 205;
+@s: 80%;
+@l: 100%;
+*/
+
+@red:		#FF3344;
+@lred:		#FF99A1;
+
+@yellow:	#FFEE33;
+@lyellow:	#FFF699;
+
+@orange:	#FF9933;
+@lorange:	#FFCC99;
+
+@blue:		#33BBFF;
+@lblue:		#7AB1CC;
+
+@violet:	#DD33FF;
+@lviolet:	#EE99FF;
+
+@green:		#88ee22; //#99FF33;
+@lgreen:	#CCFF99;
+
+@bg: 		#2D2E30; //#303031;
+@color: 	#f0f0f0;
+
+.sidebar.panel { /* Left sidebar, under opened files */
+	background: @bg3;
+}
+
+.sidebar-selection-triangle {
+	display: none !important;
+}
+.sidebar-selection {
+	background: none;
+}
+#open-files-container li.selected a {
+	background: @bg;
+	border-top: 1px solid #1E1F20;
+	border-bottom: 1px solid #505354;
+	margin-top: -1px;
+	margin-bottom: -1px;
+	margin-left: 0;
+	padding-left: 18px;
+	background: #2D2E30;
+	padding-right: 24px;
+	margin-right: 9px;
+	border-radius: 11px;
+	overflow: hidden;
+}
+
+#status-bar { /* Bar on the bottom */
+	background: @bg1;
+	color: @color2;
+	border-top: 1px solid #56595a;
+	#status-overwrite {
+		color: inherit;
+	}
+}
+.bottom-panel {
+	background: @bg3 !important;
+	color: @color !important;
+	border-top: 1px solid #56595a;
+	.toolbar, .toolbar * {
+		box-shadow: none;
+		color: #FFFFFF !important;
+		background: @bg1;
+	}
+	
+	.table-container {
+		background: @bg;
+		color: #bbb !important;
+	}
+	.table-striped tbody tr:nth-child(even) td, .table-striped tbody tr:nth-child(even) th {
+		background: darken(@bg1, 2%);
+	}
+	.table-striped tbody tr:nth-child(odd) td, .table-striped tbody tr:nth-child(odd) th {
+		background: lighten(@bg1, 2%);
+	}
+	.table-container tr.selected td {
+		color: #ffffff;
+	}
+}
+.codehint-menu .dropdown-menu {
+	border-radius: 0px;
+}
+
+
+#main-toolbar { /* Toolbar on the right */
+	background: @bg1;
+}
+
+.content:before {
+	content: "";
+	height: 1px;
+	width: 100%;
+	background: #1E1F20;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	opacity: 0.33;
+}
+
+/* TODO
+.modal {
+	background: #1E1F20;
+	.dialog-title {
+		color: @color;
+	}
+	.modal-header {
+		background: @bg1;
+	}
+	.modal-body,
+	.modal-footer {
+		background: @bg3;
+	}
+}*/
+
+.modal-bar {
+	background: @bg1;
+}
+
+
+.content .CodeMirror, #editor-holder #not-editor {
+	font-family: 'Source Code Pro', Consolas, monaco, monospace;
+	font-size: 14px;
+	background-color: @bg;
+    color: @color;
+}
+
+.content .CodeMirror .CodeMirror-cursor { /* cursor */
+	border-left: 1px solid @color1;
+}
+
+.content .CodeMirror .CodeMirror-cursor {
+    z-index: 5;
+    border-left: 2px solid #FFFFFF !important;
+}
+.content .CodeMirror .CodeMirror-selected {
+	background: rgba(255,255,255, .1);
+}
+
+.content .CodeMirror .CodeMirror-gutters {
+	background: lighten(@bg, 3%);
+}
+.content .CodeMirror .CodeMirror-linenumber {
+//	color: darken(#999999, 20%);
+//	color: @bg3;
+	color: lighten(@bg3, 7%);
+	padding: 0 9px;
+}
+/*
+.content .CodeMirror .CodeMirror-foldgutter {
+	background: lighten(@bg, 2%);
+}
+*/
+::-webkit-scrollbar {
+	background: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+	box-shadow: 0 0 0 12px @bg3 inset !important;
+//	border-radius: 8px;
+	margin-right: 3px;
+}
+
+.content .CodeMirror .CodeMirror-foldgutter-open, 
+.content .CodeMirror .CodeMirror-foldgutter-folded {
+	color: darken(@color2, 25%);
+	text-align: center;
+}
+	
+.content .CodeMirror .CodeMirror-foldmarker {
+	background: @bg1;
+	border-color: @bg2;
+}
+/*
+.content .CodeMirror .CodeMirror-activeline {
+	background: rgba(255,255,255,.1);
+}*/
+
+.content .CodeMirror-focused .CodeMirror-activeline-background, 
+.content .CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+	background-color: rgba(255,255,255,0.02);
+	color: darken(@color2, 10%);
+}
+
+/* DEFAULT THEME 
+
+.cm-s-default .cm-keyword {color: #708;}
+.cm-s-default .cm-atom {color: #219;}
+.cm-s-default .cm-number {color: #164;}
+.cm-s-default .cm-def {color: #00f;}
+.cm-s-default .cm-variable {color: black;}
+.cm-s-default .cm-variable-2 {color: #05a;}
+.cm-s-default .cm-variable-3 {color: #085;}
+.cm-s-default .cm-property {color: black;}
+.cm-s-default .cm-operator {color: black;}
+.cm-s-default .cm-comment {color: #a50;}
+.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-string-2 {color: #f50;}
+.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-builtin {color: #30a;}
+.cm-s-default .cm-bracket {color: #997;}
+.cm-s-default .cm-tag {color: #170;}
+.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-header {color: blue;}
+.cm-s-default .cm-quote {color: #090;}
+.cm-s-default .cm-hr {color: #999;}
+.cm-s-default .cm-link {color: #00c;}
+*/
+
+.content .cm-keyword {	 color: @blue;}				// 'Function', '!important' etc.
+.content .cm-atom {		 color: #FFFFFF;} 			// Boolean, Hex colors etc.
+.content .cm-number {	 color: #FFFFFF;}			// Numbers
+.content .cm-def {		 color: #FFFFFF;}			// js var def
+.content .cm-variable {	 color: #ddd;}//@lred;}
+.content .cm-variable-2 {color: @lblue;}
+.content .cm-variable-3 {color: @lorange;}
+.content .cm-property {	 color: @lblue;}			// CSS property
+.content .cm-operator {	 color: @color;}			// Math operators
+.content .cm-comment {	 color: #8c8c8c;}			// Comments - like this one
+.content .cm-string {	 color: @lyellow;}			
+.content .cm-string-2 {	 color: @yellow,;}			
+.content .cm-meta {		 color: @red;}				
+.content .cm-builtin {	 color: @orange;} 			// ID
+.content .cm-qualifier { color: @lyellow;} 			// Class
+.content .cm-bracket {	 color: @color;}			
+.content .cm-tag {		 color: @blue !important;} 	// HTML Tag
+.content .cm-attribute { color: @lblue;} 			// HTML Tag attribute
+.content .cm-matchhighlight {
+	background-color: rgba(40,40,40,10);
+}
+
+.content .CodeMirror-matchingbracket {
+    color: @yellow !important;
+    font-weight: bold;
+}
+
+.content span.CodeMirror-matchingtag {
+	color: @yellow !important;
+//    text-decoration:underline;
+	background: none;
+}
+
+.content span.CodeMirror-searching {
+	background-color: rgba(34, 34, 34, 0.75);
+	box-shadow: 0 0 0 1px @bg2;
+	color: @color;
+}
+
+.content {
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+	border-color: @bg2;
+	box-shadow: 0 0 1px 1px #8fddff;
+}
+}
