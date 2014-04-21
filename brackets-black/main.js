@@ -36,6 +36,11 @@ define(function (require, exports, module) {
 		KeyBindingManager.removeBinding("Alt-O");
 		KeyBindingManager.removeBinding("Ctrl-Alt-O"); // don't know why
 		KeyBindingManager.removeBinding("Shift-Alt-O");
+		
+		// ś
+		KeyBindingManager.removeBinding("Alt-S");
+		KeyBindingManager.removeBinding("Shift-Alt-S");
+		KeyBindingManager.removeBinding("Ctrl-Alt-S");
 	};
 	
     AppInit.appReady(function () {
